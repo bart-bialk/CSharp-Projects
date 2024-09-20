@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="~/css/songs.css" asp-append-version="true"/>
+</head>
+
+@{
+    ViewData["Title"] = "Songs";
+}
+@model List<Song>
+<h1 class="title">All Songs</h1>
+
+    <form method="get" class="form">
+        <input type="text" class ="searchInp" name="query" id="query" />
+        <button type="submit" class="formBut">Search</button>
+        <button type="submit" class="formBut" asp-area="" asp-controller="Songs" asp-action="Create">Add new</button>
+    </form>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Duration</th>
+    </tr>
+    <tr>
+    @foreach (var st in Model)
+    {
+        <tr>
+            <td>@st.Title</td>
+            <td>@st.Author</td>
+            <td>@st.Duration</td>
+        </tr>
+    }
+</table>

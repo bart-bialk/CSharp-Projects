@@ -1,0 +1,22 @@
+body{
+    color: #45A29E;
+}
+
+.title{
+    text-align: center;
+}
+
+.table{
+    color: #C5C6C7;
+}
+.form{
+    text-align: center;
+}
+.searchInp{
+    background-color: #45A29E;
+    color:  #1F2833;
+}
+.formBut{
+    background-color: #45A29E;
+    color:  #1F2833;
+}
